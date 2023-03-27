@@ -61,8 +61,10 @@
             }
         }
 
-        public static void lerNumeros(ref int[] num, ref int soma)
+        public static int lerNumeros(ref int[] num, ref int soma)
         {
+            int contadorNeg = 1;
+
             for (int i = 0; i < 10; i++)
             {
                 Console.Write("Digite um numero: ");
@@ -70,17 +72,19 @@
                 soma = soma + num[i];
                 Console.WriteLine();
             }
+            return contadorNeg;
         }
 
         public static void Main()
         {
             int[] num = new int[10];
-            int nMaior, nMenor, soma = 0, numNegativo = 0;
+            int nMaior, nMenor, soma = 0, numNegativo;
             decimal valorMedio;
             char op;
             int numeroRemover;
 
             lerNumeros(ref num, ref soma);
+            
 
             nMaior = nMenor = num[0];
 
